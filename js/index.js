@@ -4,6 +4,7 @@ var arr = ['asdf', '23rsdfs', 'gfewc', 'danlwuji8u', 'hotdog']
 
 // In JS: Loop through the array. Change each string to lowercase, and then add them to a new array.
 
+var newArr = arr.map(el => el.toLowerCase())
 
 // In JS: Loop through the new array (all lowercase strings) and log the first and last character of each string to the console.
 
