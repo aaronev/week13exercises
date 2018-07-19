@@ -26,9 +26,6 @@ var replacedMe = me.map(el => {
 
 console.log(replacedMe)
 
-// In HTML: Create an input and a button.
-
-
 // In JS: Create a function that will get the user's input, test it against the standard regular expression for emails, and log the result in the console.
 
 
