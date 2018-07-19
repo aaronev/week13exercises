@@ -12,12 +12,19 @@ newArr.map(el => console.log(el[0], el[el.length - 1]))
 
 // In JS: Create a variable and store your name in it. Using the split method and a loop, log each letter of your name to the console.
 
-var me = "aaron"
+var me = "aaron".split('')
 
-me.split('').map(el => console.log(el))
+me.map(el => console.log(el))
 
 // In JS: Using the join method, put your name back together and replace all occurrences of one letter with another. (ie: replace all a's with y's)
 
+var replacedMe = me.map(el => {
+  if (el == 'a') {
+    return 'e'
+  } else return el
+}).join('')
+
+console.log(replacedMe)
 
 // In HTML: Create an input and a button.
 
