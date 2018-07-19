@@ -8,6 +8,7 @@ var newArr = arr.map(el => el.toLowerCase())
 
 // In JS: Loop through the new array (all lowercase strings) and log the first and last character of each string to the console.
 
+newArr.map(el => console.log(el[0], el[el.length - 1]))
 
 // In JS: Create a variable and store your name in it. Using the split method and a loop, log each letter of your name to the console.
 
