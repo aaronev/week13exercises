@@ -28,8 +28,15 @@ console.log(replacedMe)
 
 // In JS: Create a function that will get the user's input, test it against the standard regular expression for emails, and log the result in the console.
 
+var getEmailFromUser = function(event) {
+  var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  var userInput = document.getElementById('email')
+  console.log(userInput.match(reg))
+
+}
 
 // In JS: Make the function "listen" to the button using addEventListener().
+
 
 
 // Once you have completed these exercises add them to Github.
