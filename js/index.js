@@ -29,14 +29,21 @@ console.log(replacedMe)
 // In JS: Create a function that will get the user's input, test it against the standard regular expression for emails, and log the result in the console.
 
 var getEmailFromUser = function(event) {
-  var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  var userInput = document.getElementById('email')
-  console.log(userInput.match(reg))
 
+  document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault()
+  })
+
+  var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  var userInput = document.getElementById('email').value
+
+  if (userInput.match(reg)) console.log(userInput.match(reg)[0])
+  else console.log('Invalid Email')
+  
 }
 
 // In JS: Make the function "listen" to the button using addEventListener().
 
-
+document.getElementById('submit').addEventListener('click', getEmailFromUser)
 
 // Once you have completed these exercises add them to Github.
